@@ -2,6 +2,7 @@ package com.example.Controller;
 
 import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -15,7 +16,7 @@ public class LoginController {
 	
 	@RequestMapping(value = "/login",method = RequestMethod.POST)
 	@ResponseBody
-	public ResultVo login(User user){
+	public ResultVo login(@RequestBody User user){
 		System.out.println(user.getAccount());
 		System.out.println(user.getPassword());
 		ResultVo result=new ResultVo("0");
