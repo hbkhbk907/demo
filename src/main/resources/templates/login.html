@@ -5,21 +5,48 @@
     <meta name="content-type" content="text/html; charset=UTF-8"/>
     <script src="/js/jquery-3.3.1.min.js"></script>
     <script src="/js/login.js"></script>
-
+	<!-- <link href="/css/login.css" type="stylesheet"/> -->
+	<style type="text/css">
+		#login_table{
+			border:2px solid black;
+		}
+		#login_table{
+			width:400px;
+			height:200px;
+		}
+		tbody tr{//没有边框
+			border:1px solid black;
+		}
+		.text{
+		
+		 	background-color:ffffff;
+		}
+	</style>
+	
   </head>
   <body>
-  		<form onsubmit="return login()">
-  			<table id="login">
-  				<tr>
-  					<td><label>账号</label></td>
-  					<td><input type="text" name="account" id="account"/></td>
-  				</tr>
-  				<tr>
-  					<td><label>密码</label></td>
-  					<td><input type="password" name="password" id="password"/></td>
-  				</tr>
-  			</table>
-  			<input type="submit"/>
-  		</form>
+  		<center>
+	  		<form id="login_form" onsubmit="return login()">
+	  			<table id="login_table">
+	  				<tbody>
+		  				<tr>
+		  					<td><label for="account" class="text">账号:</label></td>
+		  					<td><input type="text" name="account" id="account"/></td>
+		  				</tr>
+		  				<tr>
+		  					<td><label for="password" class="text">密码:</label></td>
+		  					<td><input type="password" name="password" id="password"/></td>
+		  				</tr>
+	  				</tbody>
+	  				<tfoot>
+		  				<tr>
+		  					<td id="submit">
+		  						<input type="submit"/>
+		  					</td>
+		  				</tr>
+	  				</tfoot>
+	  			</table>
+	  		</form>
+	  	</center>
   </body>
 </html>
