@@ -7,46 +7,56 @@
     <script src="/js/login.js"></script>
 	<!-- <link href="/css/login.css" type="stylesheet"/> -->
 	<style type="text/css">
-		#login_table{
-			border:2px solid black;
+		body{
+			background-image:url("/image/background.jpg");
+			background-repeat:no-repeat;
+			background-size: cover;
+  			-webkit-background-size: cover;
+  			-o-background-size: cover;
 		}
-		#login_table{
-			width:400px;
-			height:200px;
-		}
-		tbody tr{//没有边框
+		#login{
+			background-color:#aeb6b7;
+			width:300px;
 			border:1px solid black;
+			padding:0px 0px;
+			position: absolute;
+            left:50%;
+            top:50%;
+            margin-left:-150px;
+            margin-top:-100px;
+		}
+		#login p{
+			font-family:宋体;
+			text-align:center;
+			margin:0px 0px 10px 0px;
+			background-color:#b9b4ac;
+			border-bottom:1px solid black;
+		}
+		#submit{
+			width:90px;
+			height:30px;
+			margin:15px 100px 10px 100px;
+			background-color:#e4cb89;
 		}
 		.text{
-		
-		 	background-color:ffffff;
+			margin:0px 10px 15px 20px;
+		}
+		.input{
+			margin:0px 0px 10px 0px;
 		}
 	</style>
 	
   </head>
   <body>
-  		<center>
+  		<div id="login">
 	  		<form id="login_form" onsubmit="return login()">
-	  			<table id="login_table">
-	  				<tbody>
-		  				<tr>
-		  					<td><label for="account" class="text">账号:</label></td>
-		  					<td><input type="text" name="account" id="account"/></td>
-		  				</tr>
-		  				<tr>
-		  					<td><label for="password" class="text">密码:</label></td>
-		  					<td><input type="password" name="password" id="password"/></td>
-		  				</tr>
-	  				</tbody>
-	  				<tfoot>
-		  				<tr>
-		  					<td id="submit">
-		  						<input type="submit"/>
-		  					</td>
-		  				</tr>
-	  				</tfoot>
-	  			</table>
+	  				<p>账号登录</p>
+					<label for="account" class="text">账号:</label>
+					<input class="input" type="text" name="account" id="account"/><br/>
+					<label for="password" class="text">密码:</label>
+					<input class="input" type="password" name="password" id="password"/><br/>
+					<input id="submit" type="submit"/>
 	  		</form>
-	  	</center>
+	  	</div>
   </body>
 </html>
